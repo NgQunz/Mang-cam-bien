@@ -13,18 +13,18 @@ void setup()
 
 void loop()
 {
-  float h = dht.readHumidity();
-  float t = dht.readTemperature();
-  if (isnan(h) || isnan(t))
+  float humi = dht.readHumidity();
+  float temp = dht.readTemperature();
+  if (isnan(humi) || isnan(temp))
   {
     Serial.println("Doc DHT11 that bai");
     delay(2000);
     return;
   }
   Serial.print("Nhiet do: ");
-  Serial.print(t);
-  Serial.print(" °C  |  Do am: ");
-  Serial.print(h);
+  Serial.print(temp);
+  Serial.print(" °C | Do am: ");
+  Serial.print(humi);
   Serial.println(" %");
   delay(2000);
 }
